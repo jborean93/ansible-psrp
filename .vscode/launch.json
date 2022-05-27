@@ -1,0 +1,17 @@
+{
+    "configurations": [
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "/home/jborean/dev/ansible/bin/ansible-playbook",
+            "args": [
+                "main.yml",
+                "-vvv"
+            ],
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "cwd": "/home/jborean/dev/ansible-tester"
+        }
+    ]
+}

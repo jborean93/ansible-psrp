@@ -1,0 +1,18 @@
+namespace: jborean93
+name: psrp
+version: 0.1.0
+readme: README.md
+authors:
+- Jordan Borean @jborean93
+description: |
+  Contains the next generation PowerShell Remoting (PSRP) connection plugins.
+license_file: COPYING
+tags:
+- windows
+dependencies: {}
+repository: https://github.com/jborean93/ansible-psrp
+homepage: https://github.com/jborean93/ansible-psrp
+issues: https://github.com/jborean93/ansible-psrp/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc
+build_ignore:
+- .vscode
+- tests/integration/inventory*
