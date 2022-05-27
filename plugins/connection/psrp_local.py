@@ -19,8 +19,7 @@ options:
       on Windows hosts.
     - Can be set to I(pwsh) to target PowerShell 6+ or if using a non-Windows
       host.
-    # default: powershell.exe
-    default: pwsh
+    default: powershell.exe
     type: str
     vars:
     - name: ansible_psrp_local_executable
