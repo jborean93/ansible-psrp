@@ -22,7 +22,7 @@ options:
     default: powershell.exe
     type: str
     vars:
-    - name: ansible_psrp_local_executable
+    - name: ansible_psrp2_local_executable
   arguments:
     description:
     - The arguments to use when starting the C(executable).
@@ -31,7 +31,7 @@ options:
     type: list
     elements: str
     vars:
-    - name: ansible_psrp_local_executable
+    - name: ansible_psrp2_local_arguments
 """
 
 from ._psrp_base import PSRPBaseConnection, psrp

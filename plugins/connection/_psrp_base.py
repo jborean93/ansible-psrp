@@ -93,6 +93,13 @@ class PSHostUI(psrp.PSHostUI):
     ) -> None:
         self.stdout.write(f"WARNING: {line}\n")
 
+    def write_progress(
+        self,
+        *args: t.Any,
+        **kwargs: t.Any,
+    ) -> None:
+        pass
+
 
 class PSRPBaseConnection(ConnectionBase):
     module_implementation_preferences = (".ps1", ".exe", "")
@@ -126,7 +133,7 @@ class PSRPBaseConnection(ConnectionBase):
         ps = psrp.SyncPowerShell(runspace)
 
         if b64cmd := _COMMAND_PATTERN.search(cmd):
-            script = to_text(base64.b64decode(b64cmd[1]), encoding="utf-16-le")
+            script = base64.b64decode(b64cmd[1]).decode("utf-16-le")
             display.vvv(f"PSRP: EXEC {script}")
             ps.add_script(script)
 

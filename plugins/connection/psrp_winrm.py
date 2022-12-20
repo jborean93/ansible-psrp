@@ -18,21 +18,21 @@ options:
     vars:
     - name: inventory_hostname
     - name: ansible_host
-    - name: ansible_psrp_winrm_host
+    - name: ansible_psrp2_winrm_host
   remote_user:
     description:
     - The username to log in as.
     type: str
     vars:
     - name: ansible_user
-    - name: ansible_psrp_winrm_user
+    - name: ansible_psrp2_winrm_user
   remote_password:
     description:
     - The password for the C(remote_user).
     type: str
     vars:
     - name: ansible_password
-    - name: ansible_psrp_winrm_password
+    - name: ansible_psrp2_winrm_password
   port:
     description:
     - The WinRM port to connect to.
@@ -40,7 +40,7 @@ options:
     type: int
     vars:
     - name: ansible_port
-    - name: ansible_psrp_winrm_port
+    - name: ansible_psrp2_winrm_port
   use_tls:
     description:
     - Connect over HTTPS and not HTTP
@@ -48,14 +48,14 @@ options:
     default: false
     type: bool
     vars:
-    - name: ansible_psrp_use_tls
+    - name: ansible_psrp2_use_tls
   path:
     description:
     - The URI path to connect to.
     default: wsman
     type: str
     vars:
-    - name: ansible_psrp_winrm_path
+    - name: ansible_psrp2_winrm_path
   auth:
     description:
     - The authentication protocol to use for authentication.
@@ -69,7 +69,7 @@ options:
     - ntlm
     - credssp
     vars:
-    - name: ansible_psrp_winrm_auth
+    - name: ansible_psrp2_winrm_auth
   cert_validation:
     description:
     - Controls the certificate validation behaviour.
@@ -80,7 +80,7 @@ options:
     - ignore
     - validate
     vars:
-    - name: ansible_psrp_winrm_cert_validation
+    - name: ansible_psrp2_winrm_cert_validation
 """
 
 from ._psrp_base import PSRPBaseConnection, psrp
