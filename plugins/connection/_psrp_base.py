@@ -7,7 +7,6 @@ import re
 import typing as t
 
 from ansible.errors import AnsibleError
-from ansible.module_utils._text import to_text
 from ansible.plugins.connection import ConnectionBase
 from ansible.utils.display import Display
 
